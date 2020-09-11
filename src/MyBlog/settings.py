@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     #My Apps
+    'account',
 
     #Django Apps
     'django.contrib.admin',
@@ -72,6 +73,7 @@ TEMPLATES = [
 
 
 
+AUTH_USER_MODEL = 'account.Account'
 WSGI_APPLICATION = 'MyBlog.wsgi.application'
 
 
