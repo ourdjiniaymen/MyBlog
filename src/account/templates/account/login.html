@@ -1,11 +1,11 @@
 {% extends 'base.html'  %}
 {% block title %}
-	<title>Register</title>
+	<title>Login</title>
 {% endblock title %}
 {% block content %}
-	<h2>Register</h2>
+	<h2>Login</h2>
 	<form method="post">{% csrf_token %}
- 		{% for field in registration_form %}
+ 		{% for field in login_form %}
     		<p>
     			{{field.label_tag}}
             	{{field}}
@@ -19,6 +19,11 @@
 				{% endfor %}
     		</p>
     	{% endfor %}
-		<button type="submit">Register</button>
+    	{% if login_form.non_field_errors %}
+    		<div style="color: red">
+    			<p>{{login_form.non_field_errors}}</p>
+    		</div>
+    	{% endif %}
+		<button type="submit">Log in</button>
     </form>
 {% endblock content %}
