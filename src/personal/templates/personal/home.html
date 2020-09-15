@@ -2,9 +2,22 @@
 {% block title %}
 	<title>My Blog</title>
 {% endblock title%}
+
 {% block content %}
-    <h3>All users</h3>
-    {% for user in accounts %}
-        <p>{{user}}</p>
-    {% endfor %}
+	<div class="blog-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Lorem Ipsum</h1>
+        <p class="lead">
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+    </div>
+    <div class="container">
+    	<div class="d-flex flex-column"><!-- flex box -->
+    		<h4>All users</h4>
+	    	{% for user in accounts %}
+	        	<p>{{user}}</p>
+	    	{% endfor %}
+    	</div>
+    
+    </div>
+    
 {% endblock content %}
